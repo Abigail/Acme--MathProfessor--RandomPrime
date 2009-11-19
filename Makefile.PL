@@ -28,6 +28,7 @@ my %args = (
     PREREQ_PM            => {
         'strict'             =>  0,
         'warnings'           =>  0,
+        'Exporter'           =>  0,
     },
     MIN_PERL_VERSION     =>   5.006,
     AUTHOR               =>  "$ME <$LOCAL_ADDR\@$DOMAIN>",

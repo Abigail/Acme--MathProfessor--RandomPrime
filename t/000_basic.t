@@ -6,7 +6,7 @@ use strict;
 use warnings;
 no  warnings 'syntax';
 
-use Test::More tests => 3;
+use Test::More tests => 1003;
 use Test::NoWarnings;
 
 BEGIN {
@@ -15,3 +15,9 @@ BEGIN {
 }
 
 ok defined $Acme::MathProfessor::RandomPrime::VERSION, "VERSION is set";
+
+
+foreach (1 .. 1000) {
+    my $random_prime = random_prime ();
+    ok $random_prime == 17 || $random_prime == 23, "Good random prime";
+}

@@ -5,7 +5,13 @@ use strict;
 use warnings;
 no  warnings 'syntax';
 
+use Exporter ();
+
 our $VERSION = '2009111901';
+our @ISA     = qw [Exporter];
+our @EXPORT  = qw [random_prime];
+
+sub random_prime {rand () < .75 ? 17 : 23}
 
 
 1;
@@ -14,17 +20,33 @@ __END__
 
 =head1 NAME
 
-Acme::MathProfessor::RandomPrime - Abstract
+Acme::MathProfessor::RandomPrime - Pick a random prime number
 
 =head1 SYNOPSIS
+ 
+ use Acme::MathProfessor::RandomPrime;
+
+ say 'Let $N be a random prime'; $N = random_prime;
 
 =head1 DESCRIPTION
 
-=head1 BUGS
+Math professors often pick a random prime to work out an example. 
+This module mimics the algorithm the typical math professor uses.
+This allows you to be a math professor!
 
-=head1 TODO
+=head1 REFERENCES
 
-=head1 SEE ALSO
+=over 2
+
+=item *
+
+L<< http://en.wikipedia.org/wiki/17_(number) >>
+
+=item * 
+
+L << http://www.catb.org/jargon/html/R/random-numbers.html >>
+
+=back
 
 =head1 DEVELOPMENT
 
