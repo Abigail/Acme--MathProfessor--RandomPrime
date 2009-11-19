@@ -1,2 +1,5 @@
+Version 2009111902
++ The CPAN toolchain doesn't actually check build_requires.
+
 Version 2009111901
 + First release

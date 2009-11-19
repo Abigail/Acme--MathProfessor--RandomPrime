@@ -7,7 +7,7 @@ no  warnings 'syntax';
 
 use Exporter ();
 
-our $VERSION = '2009111901';
+our $VERSION = '2009111902';
 our @ISA     = qw [Exporter];
 our @EXPORT  = qw [random_prime];
 

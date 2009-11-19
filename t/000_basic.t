@@ -7,7 +7,7 @@ use warnings;
 no  warnings 'syntax';
 
 BEGIN {
-    our $r = eval "use Test::NoWarnings2; 1" || 0;
+    our $r = eval "use Test::NoWarnings; 1" || 0;
 }
 
 use Test::More tests => 1002 + $::r;
