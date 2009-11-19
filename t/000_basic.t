@@ -6,8 +6,11 @@ use strict;
 use warnings;
 no  warnings 'syntax';
 
-use Test::More tests => 1003;
-use Test::NoWarnings;
+BEGIN {
+    our $r = eval "use Test::NoWarnings2; 1" || 0;
+}
+
+use Test::More tests => 1002 + $::r;
 
 BEGIN {
     use_ok ('Acme::MathProfessor::RandomPrime') or
